@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta charset="UTF-8" /
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    = csrf_meta_tags
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+  body
+    .row
+      .col-md-1
+      .col-md-10
+        .row
+          .col-md-12
+            / = render 'layouts/menu'
+        .row
+          article
+            header
+              h1.text-center.text-success
+                | Exercise
+            = yield
+      .col-md-1
+    .row.well
+
